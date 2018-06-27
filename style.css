@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+.app {
+  margin: 0 auto;
+  padding: 3em;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+.contactForm input,
+.contactForm button {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-right: 1em;
+  background: transparent;
+}
+.contactForm input:focus {
+  border: 2px solid #ccc;
+}
+
+.contactForm button {
+  cursor: pointer;
+  transition: 0.3s ;
+  -webkit-transition: 0.3s ;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s ;
+  -o-transition: 0.3s ;
+}
+
+.contactForm button:hover {
+  background: #2ecc71;
+  color: #fff;
+}
+
+/* contact list */
+
+.contactsList {
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contactItem {
+  padding: 1em;
+  margin: 1em 0;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 20% 1fr;
+  grid-template-areas:     'image contact-label-1'    'image contact-label-2'    'image contact-email';
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.contactImage {
+  grid-area: image;
+  width: 100px;
+  height: auto;
+}
+
+.contactLabel {
+  margin: 0.5em 0;
+}
+
+.contactLabel:first-child {
+  grid-area: contact-label-1;
+}
+
+.contactLabel:nth-child(2) {
+  grid-area: contact-label-2;
+}
+
+.contactEmail {
+  grid-area: contact-email;
+  margin: 0.5em 0;
+  color: #000;
+  font-weight: 300;
+}
+
