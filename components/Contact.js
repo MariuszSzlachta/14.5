@@ -5,17 +5,12 @@ var Contact = React.createClass({
 
   render: function() {
     return (
-      React.createElement('div', {className: 'contactItem'},
-        React.createElement('img', {
-          className: 'contactImage',
-          src: 'http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/contacts-icon.png'
-        }),
-        React.createElement('p', {className: 'contactLabel'}, 'Imię: ' + this.props.item.firstName),
-        React.createElement('p', {className: 'contactLabel'}, 'Nazwisko: ' + this.props.item.lastName),
-        React.createElement('a', {className: 'contactEmail', href: 'mailto:' + this.props.item.email},
-          this.props.item.email
-        )
-      )
+      <div className={'contactItem'}>
+        <img className={'contactImage'} src={'http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/contacts-icon.png'} />
+        <p className={'contactLabel'}> Imię: {this.props.item.firstName} </p>
+        <p className={'contactLabel'}> Nazwisko: {this.props.item.lastName} </p>
+        <p className={'contactEmail'}> Email: {this.props.item.email} </p>
+      </div>
     )
   },
 });
